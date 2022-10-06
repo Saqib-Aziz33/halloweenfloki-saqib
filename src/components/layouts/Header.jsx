@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
 import {FaBars, FaTimes} from 'react-icons/fa'
 
@@ -19,11 +19,11 @@ function Header() {
         <button className="btn open-nav" onClick={() => setOpenNav(true)}><FaBars size={40} /></button>
         <ul className={`nav nav-list ${openNav && 'active'}`}>
           <button className="close-nav btn" onClick={() => setOpenNav(false)}><FaTimes /></button>
-          <li className="nav-item"><Link className="nav-link" to='/'>About</Link></li>
-          <li className="nav-item"><Link className="nav-link" to='/'>Takenomics</Link></li>
-          <li className="nav-item"><Link className="nav-link" to='/'>Roadmap</Link></li>
-          <li className="nav-item"><Link className="nav-link" to='/'>Documents</Link></li>
-          <li className="nav-item"><Link className="nav-link" to='/'>FAQ</Link></li>
+          <li className="nav-item"><Link className="nav-link" to='about'>About</Link></li>
+          <li className="nav-item"><Link className="nav-link" to='tokenomics'>Takenomics</Link></li>
+          <li className="nav-item"><Link className="nav-link" to='roadmap'>Roadmap</Link></li>
+          <li className="nav-item"><Link className="nav-link" to='documents'>Documents</Link></li>
+          <li className="nav-item"><Link className="nav-link" to='faqs'>FAQ</Link></li>
           <li className="nav-item"><button className="btn nav-link">MINT FLOH RAFFLE NFT</button></li>
         </ul>
       </nav>
