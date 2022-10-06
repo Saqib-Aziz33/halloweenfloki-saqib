@@ -1,13 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+$clr-dark: #000;
+$clr-primary: #f27022FF;
+$clr-secondary: #745f98FF;
+$ff-hallo: 'Nosifer', cursive;
 
 *{
     font-family: 'Roboto', sans-serif;
 }
-
+body{
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
 
 
 // *************************** components ***************************
-
+.header{
+    .nav-link{
+        color: #fff;
+        &:hover{
+            color: $clr-secondary;
+        }
+    }
+    img{
+        height: 100px;
+    }
+}
+.hero{
+    background-image: url('./media/hero-bg.jpeg');
+    background-position: bottom bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    min-height: 100vh;
+    h1{
+        font-family: $ff-hallo;
+    }
+    .btn-primary-btn{
+        color: #fff;
+        background-color: $clr-secondary;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        padding: 0.5rem 2rem;
+    }
+    .hero-content{
+        background-color: #745F985E;
+        border: 1px solid $clr-secondary;
+        border-radius: 10px;
+        word-wrap: break-word;
+    }
+    .social-icons button{
+        color: #fff;
+        padding: 0.8rem;
+        margin: 0.1rem;
+        border-radius: 10px;
+        &:hover{
+            filter: brightness(0.8);
+        }
+    }
+}
+footer{
+    hr{
+        border-color: $clr-secondary;
+        border-width: 4px;
+    }
+}
 
 
 // *************************** overrides ***************************

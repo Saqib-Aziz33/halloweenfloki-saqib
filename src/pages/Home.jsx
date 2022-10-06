@@ -1,9 +1,10 @@
 // componenets
+import Hero from "../components/elements/Hero";
 
 function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <Hero />
     </>
   );
 }
