@@ -18,6 +18,17 @@ body{
     width: 0;
 }
 
+// mixins
+@mixin socialBtns {
+    color: #fff;
+        padding: 0.8rem;
+        margin: 0.1rem;
+        border-radius: 10px;
+        &:hover{
+            filter: brightness(0.8);
+        }
+}
+
 
 // *************************** components ***************************
 .header{
@@ -55,13 +66,12 @@ body{
         word-wrap: break-word;
     }
     .social-icons button{
-        color: #fff;
-        padding: 0.8rem;
-        margin: 0.1rem;
-        border-radius: 10px;
-        &:hover{
-            filter: brightness(0.8);
-        }
+        @include socialBtns();
+    }
+}
+.about{
+    .social-icons button{
+        @include socialBtns();
     }
 }
 footer{
@@ -77,3 +87,9 @@ footer{
 
 
 // *************************** utils ***************************
+.bar{
+    display: inline-block;
+    width: 80px;
+    margin-right: 1rem;
+    border-bottom: 2px solid white;
+}
