@@ -18,7 +18,13 @@ ul{
     list-style-type: square;
 }
 ::-webkit-scrollbar{
-    width: 0;
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: $clr-secondary;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $clr-primary;
 }
 
 // mixins
@@ -35,14 +41,61 @@ ul{
 
 // *************************** components ***************************
 .header{
+    transition: all 0.5s ease;
+    &.active-scroll{
+        background-color: #000;
+        img{
+            height: 120px;
+        }
+    }
     .nav-link{
         color: #fff;
+        font-size: 0.9rem;
+        font-weight: bold;
         &:hover{
             color: $clr-secondary;
         }
     }
+    .btn{
+        color: white;
+    }
+    .nav-item .btn{
+        border: 2px solid black;
+        border-radius: 50px;
+        padding: 0.4rem;
+        font-size: 0.8rem;
+    }
     img{
+        transition: all 0.5s;
         height: 100px;
+    }
+
+    .open-nav{
+        display: none;
+    }
+    .close-nav{
+        display: none;
+    }
+    @media only screen and (max-width: 750px) {
+        .open-nav{display: block;} 
+        .close-nav{
+            display: block;
+            margin: 1rem auto;
+            font-size: 2rem;
+        }
+        .nav-list{
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: -300px;
+            bottom: 0;
+            flex-direction: column;
+            padding: 1rem;
+            transition: all 0.5s linear;
+            &.active{
+                left: 0;
+            }
+        }
     }
 }
 .hero{
