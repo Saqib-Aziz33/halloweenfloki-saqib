@@ -238,30 +238,35 @@ ul{
         border: 2px dashed $clr-primary;
     }
 }
-.faq-section{
-    .styles_faq-row-wrapper__3vA1D{
-        background: none;
+.faqs{
+    .social-icons button{
+        @include socialBtns();
     }
-    @mixin faqText {
-        font-size: 0.8rem;
-        color: #fff;
-        padding: 0.5rem 1rem;
-    }
-    // heading
-    .styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c .styles_row-title__1YiiY{
-        @include faqText();
-    }
-    // content
-    .styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c .styles_row-content__QOGZd .styles_row-content-text__2sgAB{
-        @include faqText();
-    }
-    // icon
-    .styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c .styles_row-title__1YiiY .styles_icon-wrapper__2cftw svg{
-        fill: #fff;
-    }
-    // border
-    .styles_faq-row-wrapper__3vA1D .styles_faq-row__2YF3c{
-        border-top: 1px solid #ccc;
+    .faq-section{
+        .styles_faq-row-wrapper__3vA1D{
+            background: none;
+        }
+        @mixin faqText {
+            font-size: 0.8rem;
+            color: #fff;
+            padding: 0.5rem 1rem;
+        }
+        // heading
+        .styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c .styles_row-title__1YiiY{
+            @include faqText();
+        }
+        // content
+        .styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c .styles_row-content__QOGZd .styles_row-content-text__2sgAB{
+            @include faqText();
+        }
+        // icon
+        .styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c .styles_row-title__1YiiY .styles_icon-wrapper__2cftw svg{
+            fill: #fff;
+        }
+        // border
+        .styles_faq-row-wrapper__3vA1D .styles_faq-row__2YF3c{
+            border-top: 1px solid #ccc;
+        }
     }
 }
 footer{
@@ -282,4 +287,14 @@ footer{
     width: 80px;
     margin-right: 1rem;
     border-bottom: 2px solid white;
+}
+.scroll-top{
+    background-color: $clr-primary;
+    box-shadow: none;
+    &:hover{
+        background-color: $clr-dark;
+        svg{
+            fill: #fff;
+        }
+    }
 }

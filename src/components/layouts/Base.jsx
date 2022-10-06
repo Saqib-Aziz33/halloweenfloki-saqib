@@ -1,3 +1,4 @@
+import ScrollToTop from "react-scroll-to-top";
 // layout
 import Header from "./Header";
 import Footer from "./Footer";
@@ -9,6 +10,7 @@ const Base = (props) => {
       style={{ minHeight: "100vh" }}
     >
       <Header />
+      <ScrollToTop smooth top={200} className="scroll-top" />
       <main role="main">
         {props.children}
       </main>
