@@ -10,7 +10,7 @@ const Base = (props) => {
       style={{ minHeight: "100vh" }}
     >
       <Header />
-      <ScrollToTop smooth top={200} className="scroll-top" />
+      <ScrollToTop smooth top={200} />
       <main role="main">
         {props.children}
       </main>
