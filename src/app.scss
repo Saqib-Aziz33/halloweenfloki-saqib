@@ -14,6 +14,9 @@ body{
     color: #fff;
     overflow-x: hidden;
 }
+ul{
+    list-style-type: square;
+}
 ::-webkit-scrollbar{
     width: 0;
 }
@@ -141,6 +144,13 @@ body{
             right: 0;
             text-align: center;
         }
+    }
+}
+.roadmap{
+    .vertical-timeline::before{
+        width: 0;
+        background-color: transparent;
+        border: 2px dashed $clr-primary;
     }
 }
 footer{
