@@ -91,7 +91,11 @@ ul{
             bottom: 0;
             flex-direction: column;
             padding: 1rem;
+            border-right: 2px solid $clr-secondary;
             transition: all 0.5s linear;
+            .nav-link{
+                font-size: 1.2rem;
+            }
             &.active{
                 left: 0;
             }
@@ -107,6 +111,7 @@ ul{
     min-height: 100vh;
     h1{
         font-family: $ff-hallo;
+        animation: pulseAnim 2s ease 0s 1 normal forwards;
     }
     .btn-primary-btn{
         color: #fff;
@@ -123,6 +128,33 @@ ul{
     }
     .social-icons button{
         @include socialBtns();
+    }
+    @keyframes pulseAnim {
+        0% {
+            animation-timing-function: ease-out;
+            transform: scale(1);
+            transform-origin: center center;
+        }
+    
+        10% {
+            animation-timing-function: ease-in;
+            transform: scale(0.91);
+        }
+    
+        17% {
+            animation-timing-function: ease-out;
+            transform: scale(0.98);
+        }
+    
+        33% {
+            animation-timing-function: ease-in;
+            transform: scale(0.87);
+        }
+    
+        45% {
+            animation-timing-function: ease-out;
+            transform: scale(1);
+        }
     }
 }
 .about{
